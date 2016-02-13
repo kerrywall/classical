@@ -144,7 +144,9 @@ body {
   font-family: 'Arimo', sans-serif;
   font-size: 24px;
   max-width: 1024px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  color: #2c3e50;
+  background-color: #f7f7f7; }
 
 h1 {
   font-size: 1em; }
@@ -154,22 +156,28 @@ main {
   margin: 50px 0; }
 
 button {
-  background: #fff;
-  border: 2px solid #000;
+  clear: both;
   padding: 10px;
-  border-radius: 5px;
-  outline: none;
-  color: #000;
-  font-weight: lighter;
-  transition: 0.2s all ease; }
+  color: #2c3e50;
+  border: 3px solid #2c3e50;
+  background: white;
+  border-radius: 15px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold; }
   button:hover {
-    color: #e74c3c; }
+    color: #c0392b;
+    border-color: #c0392b; }
 
 a {
-  color: #e74c3c;
+  color: #c0392b;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
 
 p, button {
   font-size: .8em; }
+
+footer {
+  font-size: 0.7em; }

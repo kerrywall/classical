@@ -27,6 +27,8 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
  	font-size: 24px;
  	max-width: 1024px;
  	margin: 0 auto;
+ 	color: $midnightBlue;
+ 	background-color: #f7f7f7;
  }
 
  header {
@@ -42,21 +44,24 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
  }
 
  button {
- 	background: #fff;
- 	border: 2px solid #000;
- 	padding: 10px;
- 	border-radius: 5px;
- 	outline: none;
- 	color: #000;
- 	font-weight: lighter;
- 	transition: 0.2s all ease;
- 	&:hover {
- 		color: $alizarin;
- 	}
+ 	clear: both;
+    padding: 10px;
+    color: $midnightBlue;
+    border: 3px solid $midnightBlue;
+    background: white;
+    border-radius: 15px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+    	color: $pomegranate;
+    	border-color: $pomegranate;
+    }
  }
 
  a {
- 	color: $alizarin;
+ 	color: $pomegranate;
  	text-decoration: none;
  	&:hover {
  		text-decoration: underline;
