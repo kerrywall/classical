@@ -9,8 +9,29 @@ classical.randomize = function() {
 	randomKey = classical.keys[Math.floor(Math.random()*classical.keys.length)];
 }
 
+classical.video = function(query){
+	//ajax or whatever here
+	$.ajax({
+		type: "GET",
+		url: "https://www.googleapis.com/youtube/v3/search",
+		data: {
+			v:3,
+			q: query,
+			part: "snippet",
+			type: "video",
+			videoEmbeddable: "true",
+			maxResults: 1,
+			key: 'AIzaSyBDup_z0u0VSAQ86shWiq0mIMxXLsSFGMs'
+		},
+		success: function(result){
+			var theVideoURL = result.items[0].id.videoId;
+			$('.youtube').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/'+theVideoURL+'" frameborder="0" allowfullscreen></iframe>');
+		}
+	});
+};
+
 $(document).ready(function() {
-	$('.youtube').hide();
+	// $('.youtube').hide();
 });
 
 $('button').on('click',function() {
@@ -21,5 +42,8 @@ $('button').on('click',function() {
 		result = randomType + " for " + randomInstrument + " in " + randomKey;
 	}
 	$('.result a').attr('href', 'https://www.youtube.com/results?search_query='+result);
-	$('.result a').html(result);
+	$('.result a').html("search more on YouTube");
+
+	classical.video(result);
 });
+
